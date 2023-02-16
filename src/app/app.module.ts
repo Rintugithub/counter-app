@@ -15,6 +15,8 @@ import { AboutComponent } from './about/about.component';
 import { UserComponent } from './user/user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DropdownComponent } from './dropdown/dropdown.component';
+import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
+import { ChildhookComponent } from './childhook/childhook.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     AboutComponent,
     UserComponent,
     DropdownComponent,
+    LifecyclehooksComponent,
+    ChildhookComponent,
   ],
   imports: [
     BrowserModule,

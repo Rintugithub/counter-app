@@ -7,7 +7,7 @@ import { ViewChild } from '@angular/core';
   styleUrls: ['./dropdown.component.css']
 })
 export class DropdownComponent implements OnInit {
-  value:string="";
+  // value:string="";
   colours:string[]=["red","green","blue","orange","yellow","lightgreen","lightblue"];
   colourval:any;
   @ViewChild("col")marker!:ElementRef<any>;
