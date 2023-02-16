@@ -1,0 +1,6 @@
+<h1 >counter</h1>
+
+<app-couteroutput [countx]="count" ></app-couteroutput>
+
+<app-couterbuttons (newItemEventInc)="increment()" (newItemEventDec)="decrement()" (newItemEventRes)="reset()" ></app-couterbuttons>
+<app-add-counter (newItemEventAdd)="add($event)"></app-add-counter>
