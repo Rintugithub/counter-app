@@ -6,7 +6,7 @@ import { Product } from '../product';
   styleUrls: ['./lifecyclehooks.component.css']
 })
 export class LifecyclehooksComponent implements OnInit {
-  inputdata!:any;
+  inputdata:string="red";
   name!:string;
   price!:number;
   product:Product = new Product();
