@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnInit, SimpleChanges, Input, DoCheck, AfterContentInit, ContentChild, ElementRef, AfterContentChecked, ViewChild, AfterViewInit, AfterViewChecked } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges, Input, DoCheck, AfterContentInit, ContentChild, ElementRef, AfterContentChecked, ViewChild, AfterViewInit, AfterViewChecked, OnDestroy } from '@angular/core';
 import { Product } from '../product';
 
 @Component({
@@ -7,16 +7,21 @@ import { Product } from '../product';
   styleUrls: ['./childhook.component.css']
 })
 export class ChildhookComponent implements OnInit,OnChanges,DoCheck,
- AfterContentInit,AfterContentChecked,AfterViewInit,AfterViewChecked{
+ AfterContentInit,AfterContentChecked,AfterViewInit,AfterViewChecked,OnDestroy{
 @Input()parentdata:any;
 @Input()productdata!:Product;
 @ContentChild("child")childdata!:ElementRef;
 @ViewChild("children")childrens!:ElementRef;
 
+
   constructor() {
     console.log("constructor called");
 
    }
+  ngOnDestroy(): void {
+    console.log("ngOnDestroy");
+
+  }
   ngAfterViewChecked(): void {
     console.log("ngAfterViewChecked");
     this.childrens.nativeElement.setAttribute("style",`background-color:${this.parentdata}`);
