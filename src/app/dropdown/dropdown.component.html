@@ -1,11 +1,14 @@
-<h1>Select colour</h1>
-<select name="select color" ngModel="changeBg(value)">
-  <option (click)="changeBg(value)" value="red" >Red</option>
-  <option value="blue" >Blue</option>
-  <option value="red" >Orange</option>
+<div #col class="val"> </div>
+<br>
+<select style=" margin: 20px 30px ; color:red"
+   [value]="col" #v (change)="changebg(v.value)">
+    <option>select colour</option>
+    <option *ngFor="let col of colours" >{{col}}</option>
 
-
-
-
-</select> &nbsp;
-<button>colour</button>
+</select>
+<button style=" margin:5px"
+ class="btn btn-primary"
+*ngFor="let col of colours"
+ [value]="col"
+ #v (click)="changebg(v.value)">{{col}}</button>
+<h1>selected colour is {{colourval}}</h1>
