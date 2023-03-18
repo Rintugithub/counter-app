@@ -16,9 +16,6 @@ const routes: Routes = [
   {path:"hooks",component:LifecyclehooksComponent}
 
 
-
-
-
 ];
 
 @NgModule({
